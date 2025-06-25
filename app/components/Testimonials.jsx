@@ -26,7 +26,7 @@ export default function TestimonialSlider() {
   return (
     <section className="py-20 bg-white text-center font-sans">
       {/* Title */}
-      <h4 className="text-[#2e6369] font-montez text-xl mb-2" style={{ fontFamily: 'Montez, cursive',fontSize:'40px' }}>Testimonial</h4>
+      <h4 className="text-[#2e6369] font-montez text-xl mb-2" style={{ fontFamily: 'Montez, cursive',fontSize:'40px' }}>Testimonials</h4>
       <h2 className="text-3xl font-bold text-[#0e1f51] mb-10" style={{ fontFamily: 'Manrope, cursive',fontSize:'42px' }}>What Client Say About Us</h2>
 
       <div className="relative bg-[#102f2d] rounded-lg overflow-hidden max-w-7xl mx-auto px-4 py-12">
