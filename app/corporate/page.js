@@ -17,11 +17,20 @@ export default function FlightsPage() {
       <OfferSection/>
       {/* <DestinationCorporate/> */}
       <CorporateGetaways/>
-      <InOfficeActivities/>
-      <InOfficeActivities/>
-      <InOfficeActivities/>
-      <InOfficeActivities/>
-      <InOfficeActivities/>
+      <InOfficeActivities heading="In Office Activities"
+        subheading="Bring the excitement to your workspace with dynamic activities that foster creativity, engagement, and team bonding, right within your office walls."/>
+      <InOfficeActivities
+      heading="Team Outing Activities"
+        subheading="Bring the excitement to your workspace with dynamic activities that foster creativity, engagement, and team bonding, right within your office walls."/>
+      <InOfficeActivities
+      heading="Conferences"
+        subheading="Bring the excitement to your workspace with dynamic activities that foster creativity, engagement, and team bonding, right within your office walls."/>
+      <InOfficeActivities
+      heading="Weekend Excursions"
+        subheading="Bring the excitement to your workspace with dynamic activities that foster creativity, engagement, and team bonding, right within your office walls."/>
+      <InOfficeActivities
+      heading="Add On Activities"
+        subheading="Bring the excitement to your workspace with dynamic activities that foster creativity, engagement, and team bonding, right within your office walls."/>
     </main>
   );
 }

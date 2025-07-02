@@ -44,7 +44,7 @@ const slides = [
   },
 ];
 
-export default function InOfficeActivities() {
+export default function InOfficeActivities({ heading, subheading}) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const [isReady, setIsReady] = useState(false);
@@ -55,12 +55,10 @@ export default function InOfficeActivities() {
 
   return (
     <section className="py-14 px-4 max-w-7xl mx-auto relative">
-      <h2 className="text-4xl font-bold text-center text-gray-800 mb-2">
-        In Office Activities
-      </h2>
-      <p className="text-center text-gray-500 mb-10 max-w-2xl mx-auto">
-        Bring the excitement to your workspace with dynamic activities that foster creativity, engagement, and team bonding, right within your office walls.
-      </p>
+      <h2 className="text-4xl font-bold text-center text-gray-800 mb-2">{heading}</h2>
+      {subheading && (
+        <p className="text-center text-gray-500 mb-10 max-w-2xl mx-auto">{subheading}</p>
+      )}
 
       <div className="relative flex items-center">
         {/* Left Arrow */}
