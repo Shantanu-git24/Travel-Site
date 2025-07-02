@@ -31,9 +31,10 @@ export default function RootLayout({ children }) {
         />
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
       </head>
-      <Header/>
+      
       <body>{children}</body>
     </html>
+    
   );
 }
 

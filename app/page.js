@@ -10,12 +10,13 @@ import Kolkata from './components/Kolkata';
 import UpcomingSlider from './components/Upcoming';
 import TestimonialSlider from './components/Testimonials';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
     <main className="min-h-screen font-sans bg-white">
       {/* Hero Section */}
-      {/* <Header/> */}
+      <Header/>
 
       {/* Info Section */}
       <section className="grid  grid-cols-1 md:grid-cols-2 gap-8 px-10 py-16 items-start">
@@ -84,6 +85,7 @@ export default function Home() {
       <VisaFreeDestinations/>
       <Kolkata/>
       <UpcomingSlider/>
+      {/* <Footer/> */}
       
       
     </main>
