@@ -76,7 +76,7 @@ export default function PackagesPage() {
                             {packages.slice(0, visibleCount).map((pkg, index) => (
                                 <div
                                     key={index}
-                                    className="bg-white border border-gray-200 rounded-[15px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between h-[380px] md:h-[350px] lg:h-[380px]"
+                                    className="bg-white border border-gray-300 rounded-[15px] overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between h-[380px] md:h-[350px] lg:h-[380px]"
                                 >
                                     <img
                                         src={pkg.file_path || '/images/default.jpg'}
@@ -105,7 +105,7 @@ export default function PackagesPage() {
 
                                     {/* View Itinerary Button – full width + touches card bottom */}
                                    
-                                        <button className="bg-blue-500 text-white text-sm w-full py-3  hover:bg-blue-600 transition">
+                                        <button className="bg-[#0094DA]  text-white text-lg w-full py-3  hover:bg-[#0095dae8] transition">
                                             View Itinerary
                                         </button>
                                     
@@ -118,7 +118,7 @@ export default function PackagesPage() {
                             <div className="flex justify-center mt-8">
                                 <button
                                     onClick={handleViewMore}
-                                    className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 text-sm"
+                                    className="bg-[#0094DA] text-white px-6 py-2 rounded hover:bg-[#0095dae8] text-sm"
                                 >
                                     View More
                                 </button>
