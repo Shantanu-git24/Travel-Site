@@ -26,6 +26,9 @@ export default function Header() {
           <Link href="/corporate" className="flex items-center text-[#0094DA] gap-1 hover:text-[#0094DA] cursor-pointer">
             <Briefcase className="w-4 h-4" /> <span className="text-[16px]">Corporate Package</span>
            </Link>
+           <Link href="/about" className="flex items-center text-[#0094DA] gap-1 hover:text-[#0094DA] cursor-pointer">
+            <Briefcase className="w-4 h-4" /> <span className="text-[16px]">About Us</span>
+           </Link>
         </nav>
 
         {/* Buttons */}

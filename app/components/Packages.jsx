@@ -27,44 +27,76 @@ export default function PackagesPage() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-12 gap-6">
             {/* Filter Section */}
-            <div className="col-span-12 md:col-span-3 bg-white shadow-sm rounded p-4 border border-gray-200">
-                <h4 className="text-lg font-semibold mb-4">Filters</h4>
-                <div className="col-span-12 md:col-span-3 bg-white shadow-sm rounded p-4 border border-gray-200">
+            {/* <div className="col-span-12 md:col-span-3 bg-white shadow-sm rounded p-4 border border-gray-200">
+                <h4 className="text-lg font-semibold mb-4">Filters</h4> */}
+                <div className="col-span-12 md:col-span-3 bg-white shadow-sm rounded p-4 border border-gray-200 h-[90vh]">
                     <h4 className="text-lg font-semibold mb-4">Filters</h4>
 
                     <div className="mb-6">
                         <h6 className="font-medium mb-2">Duration (Nights)</h6>
-                        <input type="range" min={1} max={10} className="w-full" />
+                        <input type="range" min={1} max={10} className="w-full custom-range" />
                     </div>
 
                     <div className="mb-6">
                         <h6 className="font-medium mb-2">Budget Per Person</h6>
-                        <label className="block text-sm mb-1">
-                            <input type="checkbox" className="mr-2" /> ₹45,000 – ₹55,000
+                        <label className="block text-sm mb-1 align-items-center">
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> ₹45,000 – ₹55,000
                         </label>
                         <label className="block text-sm mb-1">
-                            <input type="checkbox" className="mr-2" /> ₹10,001 – ₹20,000
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> ₹10,001 – ₹20,000
                         </label>
                         <label className="block text-sm mb-1">
-                            <input type="checkbox" className="mr-2" /> ₹10,001 – ₹20,000
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> ₹10,001 – ₹20,000
                         </label>
                         <label className="block text-sm mb-1">
-                            <input type="checkbox" className="mr-2" /> ₹20,001 – ₹30,000
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> ₹20,001 – ₹30,000
                         </label>
                     </div>
 
                     <div className="mb-6">
                         <h6 className="font-medium mb-2">Cities</h6>
                         <label className="block text-sm mb-1">
-                            <input type="checkbox" className="mr-2" /> Delhi
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> Delhi
                         </label>
                         <label className="block text-sm mb-1">
-                            <input type="checkbox" className="mr-2" /> Mumbai
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> Mumbai
+                        </label>
+                    </div>
+
+                     <div className="mb-6">
+                        <h6 className="font-medium mb-2">Package Category</h6>
+                        <label className="block text-sm mb-1">
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> Family Package
+                        </label>
+                        <label className="block text-sm mb-1">
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> Group Tour
+                        </label>
+                        <label className="block text-sm mb-1">
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> Adventure Package
+                        </label>
+                        <label className="block text-sm mb-1">
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> Wild Life
+                        </label>
+                    </div>
+
+                    <div className="mb-6">
+                        <h6 className="font-medium mb-2">Themes</h6>
+                        <label className="block text-sm mb-1">
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> Culture
+                        </label>
+                        <label className="block text-sm mb-1">
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> Wildlife
+                        </label>
+                        <label className="block text-sm mb-1">
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> Honeymoon
+                        </label>
+                        <label className="block text-sm mb-1">
+                            <input type="checkbox" className="mr-2 custom-checkbox" /> Pilgrimage
                         </label>
                     </div>
                 </div>
 
-            </div>
+            
 
             {/* Card Grid Section */}
             <div className="col-span-12 md:col-span-9">
