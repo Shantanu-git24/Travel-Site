@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Packages from '../components/Packages'
 
@@ -11,6 +12,7 @@ export default function Package() {
     >
       </div>
      <Packages/>
+     <Footer/>
     </main>
   );
 }

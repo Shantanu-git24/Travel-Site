@@ -85,9 +85,7 @@ export default function Home() {
       <VisaFreeDestinations/>
       <Kolkata/>
       <UpcomingSlider/>
-      {/* <Footer/> */}
-      
-      
+      <Footer/>
     </main>
   );
 }

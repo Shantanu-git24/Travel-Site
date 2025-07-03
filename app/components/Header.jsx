@@ -9,7 +9,9 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
+          <Link href="/" >
           <Image src="/images/LOGO.png" alt="Logo" width={120} height={40} />
+          </Link>
         </div>
 
         {/* Navigation */}
