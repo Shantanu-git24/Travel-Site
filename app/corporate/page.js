@@ -8,6 +8,8 @@ import OfferSection from '../components/OfferSection';
 import WhyBook from '../components/WhyBook';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import FAQPage from '../components/FAQ';
+import OrganisationNeeds from '../components/OrganisationNeeds';
 
 export default function FlightsPage() {
   return (
@@ -32,6 +34,8 @@ export default function FlightsPage() {
       <InOfficeActivities
       heading="Add On Activities"
         subheading="Bring the excitement to your workspace with dynamic activities that foster creativity, engagement, and team bonding, right within your office walls."/>
+       <OrganisationNeeds/>
+        <FAQPage/>
     <Footer/>
     </main>
   );

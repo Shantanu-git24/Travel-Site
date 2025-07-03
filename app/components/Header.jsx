@@ -35,7 +35,7 @@ export default function Header() {
 
         {/* Buttons */}
         <div className="flex space-x-2">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-full text-sm">
+          <button className="bg-sky-400 hover:bg-sky-400 text-white px-4 py-1 rounded-full text-sm">
             Create a Trip
           </button>
           <button className="bg-sky-400 hover:bg-sky-500 text-white px-4 py-1 rounded-full text-sm">

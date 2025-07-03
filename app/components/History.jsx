@@ -70,6 +70,25 @@ const data = [
 export default function Timeline() {
     return (
         <>
+            <div
+                className="relative bg-cover bg-center h-[500px] flex items-center justify-center px-4"
+                style={{ backgroundImage: "url('images/Group 692.png')" }} // Put your image in public/plane-bg.jpg
+            >
+                <div className="absolute inset-0 bg-opacity-30" />
+
+                <div className="relative z-10 flex justify-between items-center w-full max-w-7xl mx-auto gap-8">
+                    {/* Left Side Text */}
+                    <div className="text-white align-middle pt-10">
+                        <h1 className=" text-4xl md:text-5xl font-bold mb-4">About Us</h1>
+                        <p className="text-sm max-w-md">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+
             <div className="relative max-w-6xl mx-auto py-10 mt-4 px-4 md:px-0">
                 {/* Vertical Line */}
                 <div className="absolute top-3 left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 z-0 "></div>
