@@ -4,6 +4,7 @@ import WhyBook from '../components/WhyBook';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Image from 'next/image';
+import NewsletterSection from '../components/NewsLetter';
 
 export default function FlightsPage() {
   return (
@@ -20,7 +21,7 @@ export default function FlightsPage() {
           priority
         />
       </div>
-
+      <NewsletterSection />
       <Footer />
     </main>
   );

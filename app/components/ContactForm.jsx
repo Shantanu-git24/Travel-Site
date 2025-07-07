@@ -50,7 +50,7 @@ export default function ContactSection() {
                   <label className="block text-sm font-medium mb-1">Write Your Message*</label>
                   <textarea placeholder="Write message" className="w-full border border-blue-400 rounded px-3 py-2 h-32"></textarea>
                 </div>
-                <button type="submit" className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600">Submit Now</button>
+                <button type="submit" className="bg-[#0094da] text-white px-6 py-2 rounded-full hover:bg-blue-600">Submit Now</button>
               </form>
             </div>
           </div>

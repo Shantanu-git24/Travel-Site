@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection';
 import WhyBook from '../components/WhyBook';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import NewsletterSection from '../components/NewsLetter';
 
 export default function HotelsPage() {
   return (
@@ -11,6 +12,7 @@ export default function HotelsPage() {
       <HeroSection />
       <WhyBook />
       <AirFareDeals/>
+      <NewsletterSection/>
       <Footer/>
     </main>
   );
