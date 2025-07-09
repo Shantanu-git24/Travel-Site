@@ -38,9 +38,11 @@ export default function Header() {
           <button className="bg-sky-400 hover:bg-sky-400 text-white px-4 py-1 rounded-full text-sm">
             Create a Trip
           </button>
+          <Link href="https://wealthywings.in/" target="_blank" className="cursor-pointer">
           <button className="bg-sky-400 hover:bg-sky-500 text-white px-4 py-1 rounded-full text-sm">
             Join club
           </button>
+          </Link>
         </div>
       </div>
     </header>

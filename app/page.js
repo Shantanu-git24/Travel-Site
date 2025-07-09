@@ -11,12 +11,19 @@ import UpcomingSlider from './components/Upcoming';
 import TestimonialSlider from './components/Testimonials';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import TourFilterBar from './components/TourFilter';
 
 export default function Home() {
   return (
     <main className="min-h-screen font-sans bg-white">
       {/* Hero Section */}
-      <Header/>
+      <Header />
+
+      <div
+        className="relative bg-cover bg-center h-[650px] flex items-center justify-center px-4"
+        style={{ backgroundImage: "url('images/image.png')" }} // Put your image in public/plane-bg.jpg
+      >
+      </div>
 
       {/* Info Section */}
       <section className="grid  grid-cols-1 md:grid-cols-2 gap-8 px-10 py-16 items-start">
@@ -75,17 +82,30 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <PopularTours/>
-      <ExploreByLocation/>
-      <TestimonialSlider/>
-      <TopSellingTours/>
-      <HolidayThemesSlider/>
-      <ExploreUnexplored/>
-      <OceaniaSlider/>
-      <VisaFreeDestinations/>
-      <Kolkata/>
-      <UpcomingSlider/>
-      <Footer/>
+      <section
+        className="relative bg-cover bg-center h-[200px] md:h-[150px] flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/images/Group 693.png')",
+        }}
+      >
+         <div className="relative z-10 w-full px-4 md:px-8">
+
+        {/* Filter Bar Positioned */}
+        
+          <TourFilterBar />
+        </div>
+      </section>
+      <ExploreByLocation />
+      <PopularTours />
+      <TestimonialSlider />
+      <TopSellingTours />
+      <HolidayThemesSlider />
+      <ExploreUnexplored />
+      <OceaniaSlider />
+      <VisaFreeDestinations />
+      <Kolkata />
+      <UpcomingSlider />
+      <Footer />
     </main>
   );
 }

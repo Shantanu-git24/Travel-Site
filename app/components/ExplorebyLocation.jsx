@@ -25,7 +25,7 @@ const ExploreByLocation = () => {
   }, [activeTab]);
 
   return (
-    <section className="py-16 bg-[#f7f7f7] text-center relative">
+    <section className="py-16 bg-white text-center relative">
       <h2 className="text-3xl font-semibold text-gray-800 mb-6" style={{ fontFamily: 'Manrope, cursive',fontSize:'42px' }}>Explore By Location</h2>
 
       {/* Tabs */}
