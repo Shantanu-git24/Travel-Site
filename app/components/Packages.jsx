@@ -1,11 +1,13 @@
 'use client';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 export default function PackagesPage() {
     const [packages, setPackages] = useState([]);
     const [visibleCount, setVisibleCount] = useState(15);
     const [loading, setLoading] = useState(true);
+    const router = useRouter();
 
     useEffect(() => {
         axios
@@ -137,7 +139,7 @@ export default function PackagesPage() {
 
                                     {/* View Itinerary Button – full width + touches card bottom */}
                                    
-                                        <button className="bg-[#0094DA]  text-white text-lg w-full py-3  hover:bg-[#0095dae8] transition">
+                                        <button onClick={() => router.push('/details')} className="bg-[#0094DA]  text-white text-lg w-full py-3  hover:bg-[#0095dae8] transition cursor-pointer">
                                             View Itinerary
                                         </button>
                                     
