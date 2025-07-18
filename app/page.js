@@ -52,9 +52,9 @@ export default function Home() {
         </div>
 
         <div>
-          <h4 className="text-3xl text-cyan-600 font-medium mb-2">Let's Go Together</h4>
+          <h4 className="text-3xl text-cyan-600 font-medium mb-2">Let&apos; Go Together</h4>
           <h2 className="text-5xl font-bold mb-4 leading-tight">Plan Your Trip<br />With us</h2>
-          <p className="text-lg text-gray-600 mb-6">There are many variations of passages of available but the majority have suffered alteration in some form, by injected hum randomised words which don't look even slightly.</p>
+          <p className="text-lg text-gray-600 mb-6">There are many variations of passages of available but the majority have suffered alteration in some form, by injected hum randomised words which don&apos;t look even slightly.</p>
 
           <div className="space-y-4">
             <div className="flex items-start space-x-4">
