@@ -8,12 +8,19 @@ import NewsletterSection from '../components/NewsLetter';
 export default function HotelsPage() {
   return (
     <main>
-      <Header/>
+      <Header />
       <HeroSection />
-      <WhyBook />
-      <AirFareDeals/>
-      <NewsletterSection/>
-      <Footer/>
+      <WhyBook
+        type="Hotel"
+        image="/images/image (1).png"
+        content={[
+          "Book top-rated hotels worldwide at the best prices, curated for comfort and luxury.",
+          "Enjoy seamless cancellation, special deals, and round-the-clock customer support.",
+        ]}
+      />
+      <AirFareDeals />
+      <NewsletterSection />
+      <Footer />
     </main>
   );
 }

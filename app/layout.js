@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Poppins } from 'next/font/google';
-
+import PopupWrapper from './components/PopupWrapper';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -29,12 +29,16 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Montez&display=swap"
           rel="stylesheet"
         />
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
       </head>
-      
-      <body>{children}</body>
+
+      <body>
+        <PopupWrapper>
+          {children}
+        </PopupWrapper>
+      </body>
     </html>
-    
+
   );
 }
 

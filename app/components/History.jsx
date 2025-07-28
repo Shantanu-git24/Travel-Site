@@ -1,50 +1,50 @@
 'use client';
 import { motion } from "framer-motion";
 
-const timelineData = [
-    {
-        title: "The Beginning",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        date: "January 2016",
-        side: "left",
-        image: "/images/timeline 1.png",
-    },
-    {
-        title: "Reaching 500 Travelers",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, w",
-        date: "June 2016",
-        side: "right",
-        image: "/images/timeline 2.png",
-    },
-    {
-        title: "Travel Experiences",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-        date: "March 2017",
-        side: "left",
-        image: "/images/timeline 3.png",
-    },
-    {
-        title: "Identity Crisis",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.",
-        date: "October 2016",
-        side: "right",
-        image: "/images/timeline 4.png",
-    },
-    {
-        title: "Starting from Scratch",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-        date: "August 2017",
-        side: "left",
-        image: "/images/timeline 5.png",
-    },
-    {
-        title: "Our Solution",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-        date: "November 2017",
-        side: "right",
-        image: "/images/timeline 6.png",
-    },
-];
+// const timelineData = [
+//     {
+//         title: "The Beginning",
+//         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+//         date: "January 2016",
+//         side: "left",
+//         image: "/images/timeline 1.png",
+//     },
+//     {
+//         title: "Reaching 500 Travelers",
+//         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, w",
+//         date: "June 2016",
+//         side: "right",
+//         image: "/images/timeline 2.png",
+//     },
+//     {
+//         title: "Travel Experiences",
+//         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+//         date: "March 2017",
+//         side: "left",
+//         image: "/images/timeline 3.png",
+//     },
+//     {
+//         title: "Identity Crisis",
+//         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.",
+//         date: "October 2016",
+//         side: "right",
+//         image: "/images/timeline 4.png",
+//     },
+//     {
+//         title: "Starting from Scratch",
+//         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+//         date: "August 2017",
+//         side: "left",
+//         image: "/images/timeline 5.png",
+//     },
+//     {
+//         title: "Our Solution",
+//         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+//         date: "November 2017",
+//         side: "right",
+//         image: "/images/timeline 6.png",
+//     },
+// ];
 
 const data = [
     {
@@ -90,10 +90,10 @@ export default function Timeline() {
             </div>
 
             <div className="relative max-w-6xl mx-auto py-10 mt-4 px-4 md:px-0">
-                {/* Vertical Line */}
+                {/* Vertical Line 
                 <div className="absolute top-3 left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 z-0 "></div>
 
-                {/* Top Center Marker */}
+                {/* Top Center Marker 
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
                     <div className="relative flex items-center justify-center w-24 h-24">
                         <div className="absolute w-full h-full rounded-full border-2 border-dotted border-[#0094DA]"></div>
@@ -131,7 +131,7 @@ export default function Timeline() {
                                 </div>
                             </div>
 
-                            {/* Timeline Circle */}
+                            {/* Timeline Circle 
                             <div className="relative z-10 flex items-center justify-center w-8 h-8 my-6 md:my-0">
                                 <div className="absolute w-full h-full p-6 rounded-full border-2 border-dotted border-[#0094DA]"></div>
                                 <div className="w-8 h-8 bg-[#0094DA] rounded-full z-10"></div>
@@ -142,16 +142,16 @@ export default function Timeline() {
                             </div>
                         </motion.div>
                     ))}
-                </div>
+                </div> */}
             </div>
-            <section className="bg-[#d8e2e8] py-14 my-6">
+            {/* <section className="bg-[#d8e2e8] py-14 my-6">
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                     {data.map((item, index) => (
                         <div
                             key={index}
                             className="relative flex flex-col items-center px-4"
                         >
-                            {/* Divider lines between columns (except last) */}
+                            {/* Divider lines between columns (except last) 
                             {index !== data.length - 1 && (
                                 <div className="hidden md:block absolute right-0 top-6 h-5/5 border-r border-white"></div>
                             )}
@@ -162,7 +162,7 @@ export default function Timeline() {
                         </div>
                     ))}
                 </div>
-            </section>
+            </section> */}
         </>
     );
 }

@@ -8,12 +8,12 @@ import FaqSection from '../components/FAQ';
 export default function About() {
   return (
     <main>
-        <Header/>
-      <History/>
-      <Team/>
-      <FaqSection/>
+      <Header />
+      <History />
+      <Team />
+      {/* <FaqSection/> */}
       {/* <Newsletter/> */}
-      <Footer/>
+      <Footer />
     </main>
   );
 }

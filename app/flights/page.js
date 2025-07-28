@@ -11,7 +11,14 @@ export default function FlightsPage() {
     <main>
       <Header />
       <HeroSection />
-      <WhyBook />
+      <WhyBook
+        type="Flight"
+        image="/images/image (1).png"
+        content={[
+          "We offer domestic and international multi-city bookings with your choice of airlines, timings, and routes at the most optimized fares.",
+          "Our unmatched services in booking, cancellation, and changes are widely appreciated.",
+        ]}
+      />
       <AirFareDeals />
       <div className="relative w-full h-[500px]">
         <Image

@@ -6,28 +6,50 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const TopSellingTours = () => {
-    const [tours, setTours] = useState([]);
+    const [locations, setLocations] = useState([]);
+    // const [tours, setTours] = useState([]);
+    const [activeTab, setActiveTab] = useState('india');
     const prevRef = useRef(null);
     const nextRef = useRef(null);
+    const router = useRouter();
+
+    const fetchData = (type) => {
+        fetch(`/api/location?type=${type}`)
+            .then((res) => res.json())
+            .then((data) => setLocations(data))
+            .catch((err) => console.error('Failed to fetch:', err));
+    };
 
     useEffect(() => {
-        fetch('https://test-2.e2l.tech/api/top-selling-pakages')
-            .then(res => res.json())
-            .then(data => setTours(data.data || []))
-            .catch(err => console.error(err));
-    }, []);
+        fetchData(activeTab);
+    }, [activeTab]);
+
+
 
     return (
         <section className="py-12 text-center">
-            <h4 className="text-cyan-700 text-lg font-semibold" style={{ fontFamily: 'Montez, cursive',fontSize:'40px' }}>Explore</h4>
-            <h2 className="text-3xl font-bold text-gray-800 mb-4" style={{ fontFamily: 'Manrope, cursive',fontSize:'42px' }}>Group Tours from India</h2>
+            <h4 className="text-cyan-700 text-lg font-semibold" style={{ fontFamily: 'Montez, cursive', fontSize: '40px' }}>Explore</h4>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4" style={{ fontFamily: 'Manrope, cursive', fontSize: '42px' }}>Group Tours from India</h2>
 
             {/* Filter Buttons */}
             <div className="mb-6 flex justify-center gap-4">
-                <button className="bg-blue-500 text-white px-4 py-1 rounded-full">Domestic</button>
-                <button className="border border-blue-500 text-blue-500 px-4 py-1 rounded-full">International</button>
+                <button
+                    className={`px-4 py-2 rounded-full font-medium ${activeTab === 'india' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 cursor-pointer'
+                        }`}
+                    onClick={() => setActiveTab('india')}
+                >
+                    India
+                </button>
+                <button
+                    className={`px-4 py-2 rounded-full font-medium ${activeTab === 'international' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 cursor-pointer'
+                        }`}
+                    onClick={() => setActiveTab('international')}
+                >
+                    International
+                </button>
             </div>
 
             {/* Slider Container */}
@@ -59,42 +81,42 @@ const TopSellingTours = () => {
                     }}
                     loop
                 >
-                    {tours.map((tour, id) => (
+                    {locations.map((tour, id) => (
                         <SwiperSlide key={id}>
-                            <Link href={`/tour/${tour.slug || tour.id}`} passHref>
-                            <div className="rounded-xl overflow-hidden shadow-lg bg-white w-[300px] mx-auto">
-                                <Image
-                                    src={tour.image || '/images/fallback.jpg'}
-                                    alt={tour.title}
-                                    width={300}
-                                    height={200}
-                                    className="object-cover w-full h-[200px]"
-                                />
-                                <div className="text-center">
-                                    <h3 className="font-semibold text-sm mb-2 line-clamp-2 px-2">{tour.title}</h3>
-                                    <div className="flex items-center px-2 gap-2 text-sm mb-1">
-                                        <span className="font-bold text-lg text-gray-800">₹ {tour.price}</span>
-                                        <span className="line-through text-gray-400 text-sm">₹ {tour.actual_price}</span>
-                                        <span className="text-gray-500 text-xs bg-gray-200 rounded-full px-2 py-0.5">Per Person</span>
-                                    </div>
+                            <Link href={`/details`} passHref>
+                                <div className="rounded-xl overflow-hidden shadow-lg bg-white w-[300px] mx-auto">
+                                    <Image
+                                        src={tour.image || '/images/fallback.jpg'}
+                                        alt={tour.title}
+                                        width={300}
+                                        height={200}
+                                        className="object-cover w-full h-[200px]"
+                                    />
+                                    <div className="text-center">
+                                        <h3 className="font-semibold text-sm mb-2 line-clamp-2 px-2">{tour.title}</h3>
+                                        <div className="flex items-center px-2 gap-2 text-sm mb-1">
+                                            <span className="font-bold text-lg text-gray-800">₹ {tour.price}</span>
+                                            <span className="line-through text-gray-400 text-sm">₹ {tour.actual_price}</span>
+                                            <span className="text-gray-500 text-xs bg-gray-200 rounded-full px-2 py-0.5">Per Person</span>
+                                        </div>
 
-                                    <div className="flex items-center px-2 gap-2 text-green-600 text-sm mb-2">
-                                        <span>🟢 Stay</span>
-                                        <span>🟢 Transfers</span>
-                                        <span>🟢 {tour.activities || '5 Activities'}</span>
-                                    </div>
+                                        <div className="flex items-center px-2 gap-2 text-green-600 text-sm mb-2">
+                                            <span>🟢 Stay</span>
+                                            <span>🟢 Transfers</span>
+                                            <span>🟢 {tour.activities || '5 Activities'}</span>
+                                        </div>
 
-                                    <div className="flex gap-2 mb-3 px-2">
-                                        <span className="text-gray-700 text-sm bg-gray-100 px-2 py-1 rounded">May</span>
-                                        <span className="text-gray-700 text-sm bg-gray-100 px-2 py-1 rounded">June</span>
-                                        <span className="text-gray-700 text-sm bg-gray-100 px-2 py-1 rounded">July</span>
-                                    </div>
+                                        <div className="flex gap-2 mb-3 px-2">
+                                            <span className="text-gray-700 text-sm bg-gray-100 px-2 py-1 rounded">May</span>
+                                            <span className="text-gray-700 text-sm bg-gray-100 px-2 py-1 rounded">June</span>
+                                            <span className="text-gray-700 text-sm bg-gray-100 px-2 py-1 rounded">July</span>
+                                        </div>
 
-                                    <button className="bg-blue-500 w-full text-white py-2  font-medium">
-                                        View Itinerary &rarr;
-                                    </button>
+                                        <button onClick={() => router.push('/details')} className="bg-blue-500 w-full text-white py-2  font-medium cursor-pointer">
+                                            View Itinerary &rarr;
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
                             </Link>
                             <div className="py-3">
                                 <button className="border border-blue-500 text-blue-500 px-4 py-1 rounded-full">

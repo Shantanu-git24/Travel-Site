@@ -16,11 +16,11 @@ export default function FlightsPage() {
     <main>
       <Header/>
       <HeroCorporate/>
-      <BrandSlider />
+      {/* <BrandSlider /> */}
       <OfferSection/>
-      {/* <DestinationCorporate/> */}
+      {/* <DestinationCorporate/> 
       <CorporateGetaways/>
-      <InOfficeActivities heading="In Office Activities"
+       <InOfficeActivities heading="In Office Activities"
         subheading="Bring the excitement to your workspace with dynamic activities that foster creativity, engagement, and team bonding, right within your office walls."/>
       <InOfficeActivities
       heading="Team Outing Activities"
@@ -34,8 +34,8 @@ export default function FlightsPage() {
       <InOfficeActivities
       heading="Add On Activities"
         subheading="Bring the excitement to your workspace with dynamic activities that foster creativity, engagement, and team bonding, right within your office walls."/>
-       <OrganisationNeeds/>
-        <FAQPage/>
+       <OrganisationNeeds/> 
+        <FAQPage/>*/}
     <Footer/>
     </main>
   );

@@ -25,7 +25,7 @@ export default function UpcomingSlider() {
     backgroundImage: "url('/images/Section.png')", // Replace this path
   }}>
       <div className="max-w-7xl mx-auto px-4 text-center mb-12">
-        <h3 className="text-xl text-gray-500" style={{ fontFamily: 'Montez, cursive' }}>Upcoming Event</h3>
+        <h3 className="text-lg text-gray-500" style={{ fontFamily: 'Montez, cursive' ,fontSize:'40px'}}>Upcoming Event</h3>
         <h2 className="text-4xl font-bold text-cyan-900">Virtual Holiday</h2>
       </div>
 
@@ -59,9 +59,9 @@ export default function UpcomingSlider() {
                   <span>🕒 {item.created_at}</span>
                 </div>
                 <h3 className="font-semibold text-cyan-900 text-md mb-4">{item.title}</h3>
-                <button className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-cyan-600">
+                {/* <button className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-cyan-600">
                   Register Now
-                </button>
+                </button> */}
               
             </SwiperSlide>
           ))}

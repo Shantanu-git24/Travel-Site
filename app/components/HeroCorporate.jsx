@@ -16,7 +16,7 @@ export default function HeroCorporate() {
           <ul className="space-y-3 text-base">
             <li className="flex items-center gap-2"><Calendar className="w-7 h-7" /> Unique Travel & Event Plans</li>
             <li className="flex items-center gap-2"><Clock className="w-7 h-7"/> End-to-End Support</li>
-            <li className="flex items-center gap-2"><Globe className="w-7 h-7"/>Trusted Global Partners</li>
+            <li className="flex items-center gap-2"><Globe className="w-7 h-7"/>Trusted Partners</li>
           </ul>
           <button className="mt-6 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full">
             Schedule A Callback

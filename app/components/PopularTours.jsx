@@ -5,12 +5,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
+import { useRouter } from 'next/navigation';
 
 export default function PopularTours() {
   const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
     async function fetchTours() {
@@ -107,7 +109,7 @@ export default function PopularTours() {
                     <button className="bg-white text-[#0094da] border-1 text-sm font-medium py-2 px-4 rounded-full hover:text-white hover:bg-[#0094da] transition">
                       View PDF
                     </button>
-                    <button className="bg-[#0094da] text-white text-sm font-medium py-2 px-4 rounded-full hover:bg-[#0094da] transition">
+                    <button onClick={() => router.push('/details')} className="bg-[#0094da] cursor-pointer text-white text-sm font-medium py-2 px-4 rounded-full hover:bg-[#0094da] transition">
                       View Itinerary
                     </button>
                   </div>
