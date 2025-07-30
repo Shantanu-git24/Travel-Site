@@ -59,9 +59,9 @@ export default function UpcomingSlider() {
                   <span>🕒 {item.created_at}</span>
                 </div>
                 <h3 className="font-semibold text-cyan-900 text-md mb-4">{item.title}</h3>
-                {/* <button className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-cyan-600">
-                  Register Now
-                </button> */}
+                <button className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-cyan-600">
+                  Coming Soon
+                </button>
               
             </SwiperSlide>
           ))}

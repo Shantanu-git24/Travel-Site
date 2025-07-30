@@ -108,13 +108,14 @@ export default function Footer() {
             <section className="bg-[#0094da] text-white text-sm">
                 <div className="max-w-7xl mx-auto px-6 py-3 flex flex-col md:flex-row items-center justify-between">
                     <p className="mb-2 md:mb-0">Copyright © 2025 Tourm. All Rights Reserved.</p>
-                    <div className="flex items-center space-x-2">
+                    <p className="mb-2 md:mb-0">Design and Developed By <a href="http://dignexus.com" target="_blank">Dignexus</a> </p>
+                    {/* <div className="flex items-center space-x-2">
                         <span className="mr-2">We Accept</span>
                         <img src="/images/mastercard.png" alt="MasterCard" className="w-8 h-5 object-contain" />
                         <img src="/images/visa.png" alt="Visa" className="w-8 h-5 object-contain" />
                         <img src="/images/paypal.png" alt="PayPal" className="w-8 h-5 object-contain" />
                         <img src="/images/applepay.png" alt="Apple Pay" className="w-8 h-5 object-contain" />
-                    </div>
+                    </div> */}
                 </div>
             </section>
 

@@ -135,7 +135,7 @@ export default function BaliPackagePage() {
 
             {/* Sidebar */}
             <div className="space-y-6">
-                <div className="bg-white border-1 shadow p-4 rounded">
+                {/* <div className="bg-white border-1 shadow p-4 rounded">
                     <h4 className="text-lg font-semibold mb-2">Your Route</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
                         <li>🏁 Arrival at DPS</li>
@@ -148,7 +148,7 @@ export default function BaliPackagePage() {
                         <button className="text-blue-600 text-xs underline">Edit Route</button>
                         <button className="text-blue-600 text-xs underline">Add City</button>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="flex gap-2 text-xs">
                     <button className="w-full border border-gray-300 rounded px-4 py-2 text-sm">Contact</button>

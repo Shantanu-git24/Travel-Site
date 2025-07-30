@@ -14,7 +14,7 @@ const ExploreByLocation = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const { setShowPopup } = usePopup();
-  console.log('setShowPopup:', setShowPopup);
+  // console.log('setShowPopup:', setShowPopup);
   // const [showPopup, setShowPopup] = useState(false);
 
   const fetchData = (type) => {
@@ -96,15 +96,16 @@ const ExploreByLocation = () => {
                 />
 
                 {/* Text content */}
-                <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white px-4 py-3">
+                <div className="absolute bottom-0 w-full text-left bg-gradient-to-t from-black/70 to-transparent text-white px-4 py-3">
                   <h4 className="font-bold text-base">{item.title}</h4>
-                  <p className="text-sm">From ₹<strong>{item.price}</strong>/ - per day</p>
+                  <p className="text-sm">From ₹<strong>{item.price}</strong>/ - per Person</p>
+                  <p>12 Packages</p>
                 </div>
 
                 {/* Hover button */}
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <button className="bg-[#0094da] text-black font-semibold w-full py-2 rounded-md hover:bg-[#0094da] transition cursor-pointer" onClick={() => setShowPopup(true)}>
-                    Create a Trip
+                    Plan a Trip
                   </button>
                 </div>
               </div>

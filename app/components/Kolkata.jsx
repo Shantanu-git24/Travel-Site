@@ -6,11 +6,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import Image from 'next/image';
+import PhonePopup from './PhonePopup';
 
 const Kolkata = () => {
     const [places, setPlaces] = useState([]);
     const prevRef = useRef(null);
     const nextRef = useRef(null);
+    const [isPopupOpen, setPopupOpen] = useState(false);
 
     useEffect(() => {
         fetch('https://test-2.e2l.tech/api/get-explore-the-unexplored-states')
@@ -29,8 +31,8 @@ const Kolkata = () => {
 
     return (
         <section className="py-14 bg-white text-center relative">
-            <h3 className="text-cyan-700 text-lg mb-2 " style={{ fontFamily: 'Montez, cursive',fontSize:'40px' }}>Weekend Gateways</h3>
-            <h2 className="text-3xl font-bold text-gray-800 mb-8" style={{ fontFamily: 'Manrope, cursive',fontSize:'48px' }}>From Kolkata</h2>
+            <h3 className="text-cyan-700 text-lg mb-2 " style={{ fontFamily: 'Montez, cursive', fontSize: '40px' }}>Weekend Gateways</h3>
+            <h2 className="text-3xl font-bold text-gray-800 mb-8" style={{ fontFamily: 'Manrope, cursive', fontSize: '48px' }}>From Kolkata</h2>
 
             <div className="max-w-6xl mx-auto px-4 relative">
                 {/* Custom Nav Buttons */}
@@ -62,8 +64,10 @@ const Kolkata = () => {
                 >
                     {places.map((place, id) => (
                         <SwiperSlide key={id}>
-                            <div className="relative  rounded-xl overflow-hidden shadow-md bg-white">
-                                {/* Image block only takes part of height */}
+                            <div
+                                className="relative rounded-xl overflow-hidden shadow-md bg-white cursor-pointer"
+                                onClick={() => setPopupOpen(true)}
+                            >
                                 <div className="relative h-[260px] w-full">
                                     <Image
                                         src={place.image || '/images/fallback.jpg'}
@@ -71,13 +75,11 @@ const Kolkata = () => {
                                         fill
                                         className="object-cover"
                                     />
-                                    {/* Black overlay inside image container */}
-                                    <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white px-4 py-3">
+                                    <div className="absolute text-left bottom-0 w-full text-gray-800 bg-opacity-60 px-4 py-3">
                                         <h4 className="font-semibold text-base">{place.name || 'Unknown Place'}</h4>
                                     </div>
                                 </div>
 
-                                {/* Price below the image */}
                                 <div className="py-2 px-4 text-gray-800 text-sm text-left">
                                     Starting at ₹{place.price || '4,400'} <br />
                                     Per person
@@ -85,8 +87,10 @@ const Kolkata = () => {
                             </div>
                         </SwiperSlide>
 
+
                     ))}
                 </Swiper>
+                 <PhonePopup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)} />
             </div>
         </section>
     );
